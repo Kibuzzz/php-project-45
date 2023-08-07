@@ -11,5 +11,8 @@
             "email": "kibuzz15@gmail.com"
         }
     ],
+    "bin": [
+        "bin/brain-games"
+    ],
     "require": {}
 }
