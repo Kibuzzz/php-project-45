@@ -23,4 +23,5 @@ function runGame(array $gameData, string $instruction)
         echo "Correct!\n";
         $roundCount++;
     }
+    echo "Congratulations, $name!";
 }

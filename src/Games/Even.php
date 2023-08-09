@@ -4,26 +4,24 @@ namespace Brain\Games\Even;
 
 use const Brain\Engine\ROUNDS;
 use function Brain\Functions\getRandomNumber\getNumber;
+use function Brain\Engine\runGame;
 
-function getInstruction(): string
-{
-    return "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
-}
+const INSTRUCTION = "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
 
 function isEven(int $number): string
 {
     return $number % 2 === 0 ? "yes" : "no";
 }
 
-function generateGameData(): array
+function run(): void
 {
     $roundCount = 0;
     $gameData = [];
-    while ($roundCount < 3) {
+    while ($roundCount < ROUNDS) {
         $questionNumber = getNumber();
         $rightAnswer = isEven($questionNumber);
         $gameData[] = [$questionNumber, $rightAnswer];
         $roundCount++;
     }
-    return $gameData;
+    runGame($gameData, INSTRUCTION);
 }

@@ -7,6 +7,7 @@
             "src/Cli.php",
             "src/Engine.php",
             "src/Games/Even.php",
+            "src/Games/Calc.php",
             "src/Functions/getRandomNumber.php"
         ]
     },
@@ -18,7 +19,8 @@
     ],
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.19"
