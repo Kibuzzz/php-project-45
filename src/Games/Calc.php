@@ -2,10 +2,10 @@
 
 namespace Brain\Games\Cacl;
 
-use const Brain\Engine\ROUNDS;
-
 use function Brain\Engine\runGame;
 use function Brain\Functions\getRandomNumber\getNumber;
+
+use const Brain\Engine\ROUNDS;
 
 const INSTRUCTION = "What is the result of the expression?\n";
 

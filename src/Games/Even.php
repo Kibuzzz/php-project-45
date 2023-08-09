@@ -2,9 +2,10 @@
 
 namespace Brain\Games\Even;
 
-use const Brain\Engine\ROUNDS;
 use function Brain\Functions\getRandomNumber\getNumber;
 use function Brain\Engine\runGame;
+
+use const Brain\Engine\ROUNDS;
 
 const INSTRUCTION = "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
 
