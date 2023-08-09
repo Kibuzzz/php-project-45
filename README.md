@@ -8,5 +8,5 @@
 
 Brain-game Even - 
  https://asciinema.org/a/dpbhJFdRgL4asuLuTvX4na0DM
- Brain-game Calc -
+Brain-game Calc -
  https://asciinema.org/a/nQEg2wv89zTn7zX9D89QUBvrd
