@@ -1,8 +1,8 @@
 <?php
 
-namespace Brain\Games\Games\Even;
+namespace Brain\Games\Even;
 
-use function Brain\Games\Cli\greeting;
+use function Brain\Cli\greeting;
 use function cli\prompt;
 
 const ROUNDS = 3;
