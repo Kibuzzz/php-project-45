@@ -4,6 +4,10 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function Brain\Games\Even\run;
+use function Brain\Engine\runGame;
+use function Brain\Games\Even\generateGameData;
+use function Brain\Games\Even\getInstruction;
 
-run();
+$gameData = generateGameData();
+$intro = getInstruction();
+runGame($gameData, $intro);

@@ -2,47 +2,28 @@
 
 namespace Brain\Games\Even;
 
-use function Brain\Cli\greeting;
-use function cli\prompt;
+use const Brain\Engine\ROUNDS;
+use function Brain\Functions\getRandomNumber\getNumber;
 
-const ROUNDS = 3;
-const MIN_NUMBER = 1;
-const MAX_NUMBER = 100;
-
-function getNumber(): int
+function getInstruction(): string
 {
-    return rand(MIN_NUMBER, MAX_NUMBER);
+    return "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
 }
 
-function isEven(int $number): bool
+function isEven(int $number): string
 {
-    return $number % 2 === 0;
+    return $number % 2 === 0 ? "yes" : "no";
 }
 
-function isUserGuessCorrect(bool $isEven, string $userGuess): bool
+function generateGameData(): array
 {
-    $correctAnswer = $isEven ? "yes" : "no";
-    return $userGuess === $correctAnswer;
-}
-
-function run(): void
-{
-    $name = greeting();
     $roundCount = 0;
-    echo "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
-    while ($roundCount < ROUNDS) {
-        $number = getNumber();
-        $isEven = isEven($number);
-        echo "Question: $number\n";
-        $userGuess = prompt("Your answer");
-        if (isUserGuessCorrect($isEven, $userGuess)) {
-            echo "Correct!\n";
-        } else {
-            $correctAnswer = $isEven ? "yes" : "no";
-            echo "'$userGuess' is wrong answer ;(. Correct answer was '$correctAnswer'.\nLet's try again, $name!";
-            return;
-        }
+    $gameData = [];
+    while ($roundCount < 3) {
+        $questionNumber = getNumber();
+        $rightAnswer = isEven($questionNumber);
+        $gameData[] = [$questionNumber, $rightAnswer];
         $roundCount++;
     }
-    echo "Congratulations, $name!";
+    return $gameData;
 }

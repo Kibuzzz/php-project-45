@@ -6,8 +6,6 @@ use function Brain\Cli\greeting;
 use function cli\prompt;
 
 const ROUNDS = 3;
-const MIN_NUMBER = 1;
-const MAX_NUMBER = 100;
 
 function runGame(array $gameData, string $instruction)
 {
