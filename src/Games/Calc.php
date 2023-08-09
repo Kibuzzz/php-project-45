@@ -1,10 +1,36 @@
 <?php
 
-function getInstruction(): string
+namespace Brain\Games\Cacl;
+
+use const Brain\Engine\ROUNDS;
+
+use function Brain\Engine\runGame;
+use function Brain\Functions\getRandomNumber\getNumber;
+
+const INSTRUCTION = "What is the result of the expression?\n";
+
+function calculateAnswer(int $questionNumber1, int $questionNumber2, string $questionOperator): string
 {
-    return "What is the result of the expression?\n";
+    return match ($questionOperator) {
+        "+" => $questionNumber1 + $questionNumber2,
+        "-" => $questionNumber1 - $questionNumber2,
+        "*" => $questionNumber1 * $questionNumber2,
+    };
 }
 
-function generateGameData()
+function run()
 {
+    $roundCount = 0;
+    $gameData = [];
+    $operators = ["+", "-", "*"];
+    while ($roundCount < ROUNDS) {
+        $questionNumber1 = getNumber();
+        $questionNumber2 = getNumber();
+        $questionOperator = $operators[$questionNumber1 % 3];
+        $questionString = "{$questionNumber1} {$questionOperator} {$questionNumber2}";
+        $rightAnswer = calculateAnswer($questionNumber1, $questionNumber2, $questionOperator);
+        $gameData[] = [$questionString, $rightAnswer];
+        $roundCount++;
+    }
+    runGame($gameData, INSTRUCTION);
 }
