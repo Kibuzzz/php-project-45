@@ -11,11 +11,19 @@ const INSTRUCTION = "What is the result of the expression?\n";
 
 function calculateAnswer(int $questionNumber1, int $questionNumber2, string $questionOperator): int
 {
-    return match ($questionOperator) {
-        "+" => $questionNumber1 + $questionNumber2,
-        "-" => $questionNumber1 - $questionNumber2,
-        "*" => $questionNumber1 * $questionNumber2,
-    };
+    $result = 0;
+    switch ($questionOperator) {
+        case "+":
+            $result = $questionNumber1 + $questionNumber2;
+            break;
+        case "-":
+            $result = $questionNumber1 - $questionNumber2;
+            break;
+        case "*":
+            $result = $questionNumber1 * $questionNumber2;
+            break;
+    }
+    return $result;
 }
 
 function run()
