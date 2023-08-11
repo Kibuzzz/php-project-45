@@ -10,3 +10,4 @@ Brain-game Even -
  https://asciinema.org/a/dpbhJFdRgL4asuLuTvX4na0DM
 <br>Brain-game Calc -
  https://asciinema.org/a/nQEg2wv89zTn7zX9D89QUBvrd
+<br>Brain-game Gcd - https://asciinema.org/a/BhN87k6BUJoO01DKwjPXX7VmI
