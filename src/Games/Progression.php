@@ -2,10 +2,10 @@
 
 namespace Brain\Games\Progression;
 
-use const Brain\Engine\ROUNDS;
-
 use function Brain\Engine\getNumber;
 use function Brain\Engine\runGame;
+
+use const Brain\Engine\ROUNDS;
 
 const INSTRUCTION = "What number is missing in the progression?\n";
 
