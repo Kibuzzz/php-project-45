@@ -9,7 +9,7 @@
             "src/Games/Even.php",
             "src/Games/Calc.php",
             "src/Games/Gcd.php",
-            "stc/Games/Progression.php"
+            "src/Games/Progression.php"
         ]
     },
     "authors": [
