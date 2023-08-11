@@ -9,7 +9,7 @@ use const Brain\Engine\ROUNDS;
 
 const INSTRUCTION = "What is the result of the expression?\n";
 
-function calculateAnswer(int $questionNumber1, int $questionNumber2, string $questionOperator): string
+function calculateAnswer(int $questionNumber1, int $questionNumber2, string $questionOperator): int
 {
     return match ($questionOperator) {
         "+" => $questionNumber1 + $questionNumber2,
