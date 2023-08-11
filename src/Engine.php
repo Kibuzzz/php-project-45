@@ -6,6 +6,13 @@ use function Brain\Cli\greeting;
 use function cli\prompt;
 
 const ROUNDS = 3;
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
+
+function getNumber(): int
+{
+    return rand(MIN_NUMBER, MAX_NUMBER);
+}
 
 function runGame(array $gameData, string $instruction)
 {

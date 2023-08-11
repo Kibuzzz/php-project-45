@@ -3,7 +3,7 @@
 namespace Brain\Games\Cacl;
 
 use function Brain\Engine\runGame;
-use function Brain\Functions\getRandomNumber\getNumber;
+use function Brain\Engine\getNumber;
 
 use const Brain\Engine\ROUNDS;
 

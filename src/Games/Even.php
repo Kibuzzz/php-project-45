@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Even;
 
-use function Brain\Functions\getRandomNumber\getNumber;
+use function Brain\Engine\getNumber;
 use function Brain\Engine\runGame;
 
 use const Brain\Engine\ROUNDS;
