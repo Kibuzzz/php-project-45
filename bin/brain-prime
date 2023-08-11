@@ -2,8 +2,8 @@
 
 <?php
 
-//use function Brain\Games\Prime\run;
+use function Brain\Games\Prime\run;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-//run();
+run();

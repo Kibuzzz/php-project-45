@@ -11,4 +11,5 @@ Brain-game Even -
 <br>Brain-game Calc -
  https://asciinema.org/a/nQEg2wv89zTn7zX9D89QUBvrd
 <br>Brain-game Gcd - https://asciinema.org/a/BhN87k6BUJoO01DKwjPXX7VmI
-<br>Vrain-game Progression - https://asciinema.org/a/ZScwfuvut5eqi6zIcAc6sLhbs
+<br>Brain-game Progression - https://asciinema.org/a/ZScwfuvut5eqi6zIcAc6sLhbs
+<br>Brain-game Prime - https://asciinema.org/a/g4rZyKK6QYlZmRuLddlblZhjt
